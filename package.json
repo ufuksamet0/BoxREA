@@ -1,0 +1,41 @@
+{
+  "name": "boxrea",
+  "version": "0.1.0",
+  "description": "BoxREA - Reverse Engineering Analysis Platform",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:core": "npm run dev --workspace=packages/rea-core",
+    "dev:cli": "npm run dev --workspace=packages/rea-cli",
+    "dev:desktop": "npm run dev --workspace=packages/rea-desktop",
+    "build:core": "npm run build --workspace=packages/rea-core",
+    "build:cli": "npm run build --workspace=packages/rea-cli",
+    "build:desktop": "npm run build --workspace=packages/rea-desktop",
+    "build": "npm run build:core && npm run build:cli && npm run build:desktop",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "setup": "bash scripts/setup-providers.sh",
+    "setup:dry": "bash scripts/setup-providers.sh --dry-run",
+    "doctor": "npx -y rea-agents@6.7.0 doctor --client opencode --json"
+  },
+  "keywords": [
+    "reverse-engineering",
+    "rea",
+    "binary-analysis",
+    "ghidra",
+    "ida",
+    "kuna",
+    "malware-analysis"
+  ],
+  "author": "BoxREA",
+  "license": "MIT",
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "npm@10.0.0"
+}

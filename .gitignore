@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+*.dmg
+*.app
+
+# Tauri
+packages/rea-desktop/src-tauri/target/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Turbo
+.turbo/
+
+# Coverage
+coverage/
+
+# Evidence/Targets (large binary files)
+targets/
+evidence/
+kuna_cache/
+captures/
+
+# Config local overrides
+config/config.local.yaml
+
+# Rust
+Cargo.lock
+
+# Temporary
+*.tmp
+*.temp
+.tmp/
+.temp/

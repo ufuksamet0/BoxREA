@@ -1,0 +1,74 @@
+{
+  "name": "@boxrea/core",
+  "version": "0.1.0",
+  "description": "BoxREA Core Library - REA MCP client and analysis orchestration",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./providers": {
+      "import": "./dist/providers/index.js",
+      "types": "./dist/providers/index.d.ts"
+    },
+    "./targets": {
+      "import": "./dist/targets/index.js",
+      "types": "./dist/targets/index.d.ts"
+    },
+    "./analysis": {
+      "import": "./dist/analysis/index.js",
+      "types": "./dist/analysis/index.d.ts"
+    },
+    "./evidence": {
+      "import": "./dist/evidence/index.js",
+      "types": "./dist/evidence/index.d.ts"
+    },
+    "./workspace": {
+      "import": "./dist/workspace/index.js",
+      "types": "./dist/workspace/index.d.ts"
+    },
+    "./config": {
+      "import": "./dist/config/index.js",
+      "types": "./dist/config/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "reverse-engineering",
+    "rea",
+    "mcp",
+    "ghidra",
+    "ida",
+    "kuna",
+    "binary-analysis"
+  ],
+  "author": "BoxREA",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "eventsource": "^2.0.2",
+    "uuid": "^9.0.0",
+    "yaml": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "@types/uuid": "^9.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

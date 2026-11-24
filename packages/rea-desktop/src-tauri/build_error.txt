@@ -1,0 +1,59 @@
+   Compiling rea-desktop v0.1.0 (/Users/ufuksamet/Desktop/portföy/BoxREA/packages/rea-desktop/src-tauri)
+error: proc macro panicked
+   --> src/main.rs:364:14
+    |
+364 |         .run(tauri::generate_context!())
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = help: message: failed to open icon /Users/ufuksamet/Desktop/portföy/BoxREA/packages/rea-desktop/src-tauri/icons/32x32.png: No such file or directory (os error 2)
+
+warning: unused imports: `Emitter`, `Listener`, `MenuItem`, `Menu`, `WebviewUrl`, and `WebviewWindowBuilder`
+ --> src/main.rs:4:21
+  |
+4 |     Manager, State, Emitter, Listener, WebviewUrl, WebviewWindowBuilder,
+  |                     ^^^^^^^  ^^^^^^^^  ^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^
+5 |     menu::{Menu, MenuItem},
+  |            ^^^^  ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `tokio::process::Command`
+  --> src/main.rs:11:5
+   |
+11 | use tokio::process::Command;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `Manager`
+ --> src/main.rs:4:5
+  |
+4 |     Manager, State, Emitter, Listener, WebviewUrl, WebviewWindowBuilder,
+  |     ^^^^^^^
+
+warning: unused variable: `state`
+   --> src/main.rs:219:25
+    |
+219 | async fn analyze_target(state: State<'_, Arc<AppState>>, request: AnalysisRequest) -> Result<AnalysisResponse, String> {
+    |                         ^^^^^ help: if this is intentional, prefix it with an underscore: `_state`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `state`
+   --> src/main.rs:259:24
+    |
+259 | async fn get_providers(state: State<'_, Arc<AppState>>) -> Result<Vec<ProviderInfo>, String> {
+    |                        ^^^^^ help: if this is intentional, prefix it with an underscore: `_state`
+
+warning: unused variable: `default_name`
+   --> src/main.rs:304:27
+    |
+304 | async fn save_file_dialog(default_name: String) -> Result<Option<String>, String> {
+    |                           ^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_default_name`
+
+warning: unused variable: `app`
+   --> src/main.rs:312:28
+    |
+312 | async fn start_rea_sidecar(app: &tauri::AppHandle) -> Result<(), String> {
+    |                            ^^^ help: if this is intentional, prefix it with an underscore: `_app`
+
+warning: `rea-desktop` (bin "rea-desktop") generated 7 warnings
+error: could not compile `rea-desktop` (bin "rea-desktop") due to 1 previous error; 7 warnings emitted
